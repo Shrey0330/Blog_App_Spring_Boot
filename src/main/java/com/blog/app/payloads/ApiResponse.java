@@ -12,16 +12,22 @@ import lombok.Setter;
 public class ApiResponse {
 	private String message;
 	private boolean success;
-public ApiResponse(String string, boolean b) {
-		// TODO Auto-generated constructor stub
-	}
+
 public ApiResponse() {
-	// TODO Auto-generated constructor stub
-}
+		super();
+	}
+
 
 public String getMessage() {
 	return message;
 }
+public ApiResponse(String message, boolean success) {
+	super();
+	this.message = message;
+	this.success = success;
+}
+
+
 public void setMessage(String message) {
 	this.message = message;
 }

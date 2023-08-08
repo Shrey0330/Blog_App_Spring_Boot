@@ -19,7 +19,7 @@ class BlogAppApisApplicationTests {
 	
 	@Test
 	public void reT() {
-		System.out.println(ur.getClass().getName()+" "+ ur.getClass().getPackageName());
+		System.out.println(ur.getClass().getName()+" "+ ur.getClass().getName());
 	}
 	
 }

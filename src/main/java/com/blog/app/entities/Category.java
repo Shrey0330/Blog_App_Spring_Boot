@@ -1,11 +1,14 @@
 package com.blog.app.entities;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -51,6 +54,6 @@ public Category(Integer catId, String catTitle, String catDesc) {
 	this.catTitle = catTitle;
 	this.catDesc = catDesc;
 }
-@OneToMany(mappedBy="category",cascade=CascadeType.ALL)
-private List<Post> posts=new ArrayList<>();
+@OneToMany(mappedBy="category",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+private Set<Post> posts=new HashSet<>();
 }

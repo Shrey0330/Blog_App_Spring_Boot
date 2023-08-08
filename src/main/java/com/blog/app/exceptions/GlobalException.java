@@ -20,7 +20,7 @@ public ResponseEntity<ApiResponse> resourceNotFoundExceptionHandler(ResourceNotF
 	String messsage=ex.getMessage();
 			System.out.println(messsage);
 ApiResponse apiresposnse=new ApiResponse(messsage, false);
-return new ResponseEntity<ApiResponse>(HttpStatus.NOT_FOUND);
+return new ResponseEntity<ApiResponse>(apiresposnse,HttpStatus.NOT_FOUND);
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
