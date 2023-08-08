@@ -57,6 +57,7 @@ public class Usercontroller {
     res.setMsg("deleted");
 	return  ResponseEntity.ok(res);
 	}
+//getall
 @GetMapping("/")
 public ResponseEntity<List<UserDto>> getUsers()
 {
